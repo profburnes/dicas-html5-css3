@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque quia sint placeat provident sapiente, accusamus nesciunt itaque laborum animi obcaecati reprehenderit officia dolores sed similique quod. Possimus asperiores rerum ipsum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolore, reiciendis tenetur laudantium accusamus a similique, quasi perspiciatis magni, repudiandae esse impedit fuga. Et laboriosam cum magni quos! Excepturi, vero?</p>
+    <p><a href="#" id="btnAbrir">Abrir Dialog</a></p>
+    <dialog id="dialog">
+        <h2>Teste de Janela de Diálogo</h2>
+        <p>Texto</p>
+        <p><a href="#" id="btnFechar">Fechar Janela</a></p>
+    </dialog>
+
+    <script>
+        var btnAbrir = document.getElementById('btnAbrir');
+        var dialog = document.getElementById('dialog');
+        var btnFechar = document.getElementById('btnFechar');
+
+        btnAbrir.addEventListener('click', function(){
+            dialog.showModal();
+        })
+
+        btnFechar.addEventListener('click', function() {
+            dialog.close();
+        })
+    </script>
+</body>
+</html>

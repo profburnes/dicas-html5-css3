@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Data</title>
+</head>
+<body>
+    <button type="button" id="btn1" data-valor="2.50">Tubaina - R$ 2,50</button>
+    <button type="button" id="btn2" data-valor="3.50">Coca Cola - R$ 3,50</button>
+
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+
+        btn1.addEventListener('click',function(){
+            valor = btn1.getAttribute('data-valor');
+            alert(valor)
+        })
+
+        btn2.addEventListener('click',function(){
+            valor = btn2.getAttribute('data-valor');
+            alert(valor)
+        })
+    </script>
+</body>
+</html>

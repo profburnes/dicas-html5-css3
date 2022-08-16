@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Editável</title>
+</head>
+<body>
+    <h1>Conteúdo Editável</h1>
+    <p contenteditable="true" id="paragrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, optio non! Ea aperiam molestias repellat non facere. Quasi molestiae, atque maiores unde repellat fugit rerum itaque, nobis id quam dolor.
+    </p>
+    <button type="button" id="btnSalvar">Salvar</button>
+
+    <script>
+        var paragrafo = document.getElementById('paragrafo');
+        var btnSalvar = document.getElementById('btnSalvar');
+
+        btnSalvar.addEventListener('click', function() {
+            texto = paragrafo.innerHTML;
+
+            localStorage.setItem('texto', texto);
+        })
+
+        var texto = localStorage.getItem('texto');
+        if ( texto ) {
+            paragrafo.innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
